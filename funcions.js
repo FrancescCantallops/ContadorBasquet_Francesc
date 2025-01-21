@@ -95,19 +95,6 @@ function canviar_faltes(n, equip){
     faltes[num_equip] += n;
     document.getElementById(id_faltes_equip[num_equip]).innerHTML = faltes[num_equip];
 }
-function canviar_faltes_visitant(n){
-    if(mode_restar){
-        if(faltes_visitant < n){
-            alert("ERROR: Les faltes no poden ser negatives");
-            n = 0;
-        }
-        else{
-            n = -n;
-        }
-    }
-    faltes_visitant += n;
-    document.getElementById("fouls-b").innerHTML = faltes_visitant;
-}
 
 function canviar_periode(){
     if(periode < 4){
@@ -121,7 +108,6 @@ function canviar_periode(){
             document.getElementById("period").innerHTML = "PE";
             reiniciar_faltes();
             document.getElementById("historial").innerHTML += "<p>" + "Inici del periode extra" + "</p>";
-
         }
         else if(!partit_finalitzat){
             document.getElementById("period").innerHTML = "FI DEL PARTIT";
