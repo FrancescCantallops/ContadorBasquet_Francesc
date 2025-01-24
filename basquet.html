@@ -6,8 +6,23 @@
   <title>Marcador de Bàsquet</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="funcions.js"></script>
+  <script src="contador.js"></script>
 </head>
 <body>
+
+<div class="container mt-5">
+
+  <!-- Cronómetro -->
+  <div>
+    <div>
+      <h2 class="title text-center" id="timer">10:00</h2>
+      <button class="score-button" onclick="startCountdown()">Inicia Contador</button>
+      <button class="score-button" onclick="resetCountdown()">Reiniciar Contador</button>
+      <button class="score-button" onclick="pauseCountdown()">Pausa</button>
+      <button class="score-button" onclick="resumeCountdown()">Reanudar</button>
+    </div>
+  </div>
+</div>
 
 
 <div class="container">
