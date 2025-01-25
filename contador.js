@@ -17,7 +17,7 @@ function updateCountdown() {
     // Si el tiempo llega a 0, detener el contador
     if (remainingTime <= 0) {
         clearInterval(timerInterval);
-        alert("¡El tiempo se ha agotado!");
+        alert("Fi del període");
         isCountingDown = false;
         //Quan el contador arribi a 0 mostrar nomes el boto reiniciar
         temps_acabat_contador();

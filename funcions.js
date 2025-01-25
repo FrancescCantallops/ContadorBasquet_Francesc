@@ -29,27 +29,26 @@ function iniciar_partida(){
 }
 
 function alternar_mode(){
+    id_botons_puntuacio_faltes = [
+        "canviar_puntuacio_local_1", "canviar_puntuacio_local_2", "canviar_puntuacio_local_3", "canviar_faltes_local",
+        "canviar_puntuacio_visitant_1", "canviar_puntuacio_visitant_2", "canviar_puntuacio_visitant_3", "canviar_faltes_visitant"
+    ]
+    let texte_botons_puntuacio_faltes = ["+1", "+2", "+3", "Falta"];
+    let color_botons_puntuacio_faltes = ["green", "green", "green", "red"];
+
     if (mode_restar){
         mode_restar = false;
-        document.getElementById("canviar_puntuacio_local_1").innerHTML = "+1";
-        document.getElementById("canviar_puntuacio_local_2").innerHTML = "+2";
-        document.getElementById("canviar_puntuacio_local_3").innerHTML = "+3";
-        document.getElementById("canviar_faltes_local").innerHTML = "Falta";
-        document.getElementById("canviar_puntuacio_visitant_1").innerHTML = "+1";
-        document.getElementById("canviar_puntuacio_visitant_2").innerHTML = "+2";
-        document.getElementById("canviar_puntuacio_visitant_3").innerHTML = "+3";
-        document.getElementById("canviar_faltes_visitant").innerHTML = "Falta";
     }
     else{
         mode_restar = true;
-        document.getElementById("canviar_puntuacio_local_1").innerHTML = "-1";
-        document.getElementById("canviar_puntuacio_local_2").innerHTML = "-2";
-        document.getElementById("canviar_puntuacio_local_3").innerHTML = "-3";
-        document.getElementById("canviar_faltes_local").innerHTML = "Llevar falta";
-        document.getElementById("canviar_puntuacio_visitant_1").innerHTML = "-1";
-        document.getElementById("canviar_puntuacio_visitant_2").innerHTML = "-2";
-        document.getElementById("canviar_puntuacio_visitant_3").innerHTML = "-3";
-        document.getElementById("canviar_faltes_visitant").innerHTML = "Llevar falta";
+        //Passar botons a negatiu
+        texte_botons_puntuacio_faltes = ["-1", "-2", "-3", "Llevar falta"];
+        color_botons_puntuacio_faltes = ["red", "red", "red", "green"];
+    }
+    for(let i = 0; i < id_botons_puntuacio_faltes.length; i++){
+        let index = i % texte_botons_puntuacio_faltes.length; //La llista es llegeig dues vegades per aplicar-se als dos equips
+        document.getElementById(id_botons_puntuacio_faltes[i]).innerHTML = texte_botons_puntuacio_faltes[index];
+        document.getElementById(id_botons_puntuacio_faltes[i]).style.background = color_botons_puntuacio_faltes[index];
     }
 }
 
@@ -94,7 +93,7 @@ function canviar_faltes(n, equip){
     }
     faltes[num_equip] += n;
     document.getElementById(id_faltes_equip[num_equip]).innerHTML = faltes[num_equip];
-    //document.getElementById("historial").innerHTML += "<p> FALTA" + nom_equip + "</p>"
+    document.getElementById("historial").innerHTML += "<p> Falta " + equip + " " + faltes[num_equip] + "</p>";
 }
 
 function canviar_periode(){
