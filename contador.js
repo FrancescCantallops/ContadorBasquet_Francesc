@@ -19,6 +19,8 @@ function updateCountdown() {
         clearInterval(timerInterval);
         alert("¡El tiempo se ha agotado!");
         isCountingDown = false;
+        //Quan el contador arribi a 0 mostrar nomes el boto reiniciar
+        temps_acabat_contador();
     } else {
         // Restar 1 segundo del tiempo restante
         remainingTime--;
@@ -60,4 +62,45 @@ function resumeCountdown() {
         isPaused = false;
         timerInterval = setInterval(updateCountdown, 1000);  // Reanudar el contador
     }
+}
+
+// Amagar/mostrar botons segons sigui necessari
+
+function iniciar_contador(){
+    startCountdown();
+    document.getElementById("boto_iniciar_contador").hidden = true;
+    document.getElementById("boto_reiniciar_contador").hidden = false;
+    document.getElementById("boto_pausar_contador").hidden = false;
+    document.getElementById("boto_reanudar_contador").hidden = true;
+}
+
+function reiniciar_contador(){
+    resetCountdown();
+    document.getElementById("boto_iniciar_contador").hidden = false;
+    document.getElementById("boto_reiniciar_contador").hidden = true;
+    document.getElementById("boto_pausar_contador").hidden = true;
+    document.getElementById("boto_reanudar_contador").hidden = true;
+}
+
+function pausar_contador(){
+    pauseCountdown();
+    document.getElementById("boto_iniciar_contador").hidden = true;
+    document.getElementById("boto_reiniciar_contador").hidden = false;
+    document.getElementById("boto_pausar_contador").hidden = true;
+    document.getElementById("boto_reanudar_contador").hidden = false;
+}
+
+function reanudar_contador(){
+    resumeCountdown();
+    document.getElementById("boto_iniciar_contador").hidden = true;
+    document.getElementById("boto_reiniciar_contador").hidden = false;
+    document.getElementById("boto_pausar_contador").hidden = false;
+    document.getElementById("boto_reanudar_contador").hidden = true;
+}
+
+function temps_acabat_contador(){
+    document.getElementById("boto_iniciar_contador").hidden = true;
+    document.getElementById("boto_reiniciar_contador").hidden = false;
+    document.getElementById("boto_pausar_contador").hidden = true;
+    document.getElementById("boto_reanudar_contador").hidden = true;
 }

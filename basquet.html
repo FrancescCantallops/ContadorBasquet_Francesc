@@ -16,10 +16,10 @@
   <div>
     <div>
       <h2 class="title text-center" id="timer">10:00</h2>
-      <button class="score-button" onclick="startCountdown()">Inicia Contador</button>
-      <button class="score-button" onclick="resetCountdown()">Reiniciar Contador</button>
-      <button class="score-button" onclick="pauseCountdown()">Pausa</button>
-      <button class="score-button" onclick="resumeCountdown()">Reanudar</button>
+      <button class="score-button" id="boto_iniciar_contador" onclick="iniciar_contador()">Inicia</button>
+      <button class="score-button" id="boto_reiniciar_contador" onclick="reiniciar_contador()" hidden="true">Reiniciar</button>
+      <button class="score-button" id="boto_pausar_contador" onclick="pausar_contador()" hidden="true">Pausa</button>
+      <button class="score-button" id="boto_reanudar_contador" onclick="reanudar_contador()" hidden="true">Reanudar</button>
     </div>
   </div>
 </div>

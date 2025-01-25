@@ -94,6 +94,7 @@ function canviar_faltes(n, equip){
     }
     faltes[num_equip] += n;
     document.getElementById(id_faltes_equip[num_equip]).innerHTML = faltes[num_equip];
+    //document.getElementById("historial").innerHTML += "<p> FALTA" + nom_equip + "</p>"
 }
 
 function canviar_periode(){
@@ -102,12 +103,14 @@ function canviar_periode(){
         document.getElementById("period").innerHTML = periode;
         reiniciar_faltes();
         document.getElementById("historial").innerHTML += "<p>" + "Inici del periode " + periode + "</p>";
+        reiniciar_contador(); //Reiniciar el contador automaticament al canviar de periode
     }
     else{
         if(puntuacio[0] == puntuacio[1]){
             document.getElementById("period").innerHTML = "PE";
             reiniciar_faltes();
             document.getElementById("historial").innerHTML += "<p>" + "Inici del periode extra" + "</p>";
+            reiniciar_contador(); //Reiniciar el contador automaticament al canviar de periode
         }
         else if(!partit_finalitzat){
             document.getElementById("period").innerHTML = "FI DEL PARTIT";
