@@ -1,0 +1,120 @@
+Index: basquet.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"es\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Marcador de Bàsquet</title>\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"styles.css\">\n  <script src=\"funcions.js\"></script>\n  <script src=\"contador.js\"></script>\n</head>\n<body>\n\n<div class=\"container mt-5\">\n\n  <!-- Cronómetro -->\n  <div>\n    <div>\n      <h2 class=\"title text-center\" id=\"timer\">10:00</h2>\n      <button class=\"score-button\" onclick=\"startCountdown()\">Inicia Contador</button>\n      <button class=\"score-button\" onclick=\"resetCountdown()\">Reiniciar Contador</button>\n      <button class=\"score-button\" onclick=\"pauseCountdown()\">Pausa</button>\n      <button class=\"score-button\" onclick=\"resumeCountdown()\">Reanudar</button>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"container\">\n  <header class=\"title text-center\">Marcador de Bàsquet</header>\n  <nav class=\"links\">Enllaços a altres pàgines</nav>\n  <div class=\"period-container text-center\">\n    <div id=\"period\" class=\"period-number\">1</div>\n  </div>\n  <table class=\"scoreboard\">\n    <tbody>\n    <tr>\n      <td>Local</td>\n      <td>Visitant</td>\n    </tr>\n    <tr>\n      <td id=\"points-a\">0</td>\n      <td id=\"points-b\">0</td>\n    </tr>\n    <tr>\n      <td id=\"fouls-a\">0</td>\n      <td id=\"fouls-b\">0</td>\n    </tr>\n    <tr>\n      <td>\n        <button class=\"score-button\" id=\"canviar_puntuacio_local_1\" onclick=\"canviar_puntuacio(1, 'local')\">+1</button>\n        <button class=\"score-button\" id=\"canviar_puntuacio_local_2\" onclick=\"canviar_puntuacio(2, 'local')\">+2</button>\n        <button class=\"score-button\" id=\"canviar_puntuacio_local_3\" onclick=\"canviar_puntuacio(3, 'local')\">+3</button>\n        <button class=\"score-button\" id=\"canviar_faltes_local\" onclick=\"canviar_faltes(1, 'local')\">Falta</button>\n      </td>\n      <td>\n        <button class=\"score-button\" id=\"canviar_puntuacio_visitant_1\" onclick=\"canviar_puntuacio(1, 'visitant')\">+1</button>\n        <button class=\"score-button\" id=\"canviar_puntuacio_visitant_2\" onclick=\"canviar_puntuacio(2, 'visitant')\">+2</button>\n        <button class=\"score-button\" id=\"canviar_puntuacio_visitant_3\" onclick=\"canviar_puntuacio(3, 'visitant')\">+3</button>\n        <button class=\"score-button\" id=\"canviar_faltes_visitant\" onclick=\"canviar_faltes(1, 'visitant')\">Falta</button>\n      </td>\n    </tr>\n    </tbody>\n  </table>\n  <div class=\"gestor\">\n    <td><button class=\"score-button\" id=\"reset\" onclick=\"iniciar_partida()\">Iniciar partida</button></td>\n    <td><button class=\"score-button\" id=\"canviPeriode\" onclick =\"canviar_periode()\">Canvi de període</button></td>\n    <td><button class=\"score-button\" id=\"canviar_mode\" onclick=\"alternar_mode()\">Restar / sumar</button></td>\n  </div>\n  <div class=\"history\">\n    <h2>Historial de la Partida</h2>\n    <div id=\"historial\">\n      <p> Inici del partit </p>\n    </div>\n\n  </div>\n</div>\n</body>\n</html>\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/basquet.html b/basquet.html
+--- a/basquet.html	(revision b359007bd59b509e573c008ae04cc85cf72f407c)
++++ b/basquet.html	(date 1737720500264)
+@@ -6,7 +6,7 @@
+   <title>Marcador de Bàsquet</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <script src="funcions.js"></script>
+-  <script src="contador.js"></script>
++  <script src="Contador.js"></script>
+ </head>
+ <body>
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"69835088-7723-44f6-aa8a-b05cbd09c56a\" name=\"Changes\" comment=\"Funció inutilitzada eliminada\">\n      <change afterPath=\"$PROJECT_DIR$/Contador.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/basquet.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/basquet.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"2rR8Y9m5uHoIKjv3I8L7OXccaFZ\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/francesccantallops/WebstormProjects/JavascriptClasse&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"69835088-7723-44f6-aa8a-b05cbd09c56a\" name=\"Changes\" comment=\"\" />\n      <created>1736510572092</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1736510572092</updated>\n      <workItem from=\"1736510573670\" duration=\"416000\" />\n      <workItem from=\"1736762999684\" duration=\"3096000\" />\n      <workItem from=\"1736853660570\" duration=\"2958000\" />\n      <workItem from=\"1737113095453\" duration=\"2673000\" />\n      <workItem from=\"1737367888059\" duration=\"3092000\" />\n      <workItem from=\"1737458465892\" duration=\"2939000\" />\n      <workItem from=\"1737717998234\" duration=\"1802000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"V1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1737460441788</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1737460441788</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"V1\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1737460578300</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1737460578300</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Funció inutilitzada eliminada\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1737461022363</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1737461022363</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Funció inutilitzada eliminada\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1737461194286</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1737461194286</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"V1\" />\n    <MESSAGE value=\"Funció inutilitzada eliminada\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Funció inutilitzada eliminada\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b359007bd59b509e573c008ae04cc85cf72f407c)
++++ b/.idea/workspace.xml	(date 1737723801730)
+@@ -4,8 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="69835088-7723-44f6-aa8a-b05cbd09c56a" name="Changes" comment="Funció inutilitzada eliminada">
+-      <change afterPath="$PROJECT_DIR$/Contador.js" afterDir="false" />
++    <list default="true" id="69835088-7723-44f6-aa8a-b05cbd09c56a" name="Changes" comment="Contador(romput)">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/basquet.html" beforeDir="false" afterPath="$PROJECT_DIR$/basquet.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -31,20 +31,20 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/home/francesccantallops/WebstormProjects/JavascriptClasse&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "master",
++    "last_opened_file_path": "/home/francesccantallops/WebstormProjects/marcador",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$" />
+@@ -71,7 +71,9 @@
+       <workItem from="1737113095453" duration="2673000" />
+       <workItem from="1737367888059" duration="3092000" />
+       <workItem from="1737458465892" duration="2939000" />
+-      <workItem from="1737717998234" duration="1802000" />
++      <workItem from="1737717998234" duration="2593000" />
++      <workItem from="1737723215004" duration="39000" />
++      <workItem from="1737723499314" duration="303000" />
+     </task>
+     <task id="LOCAL-00001" summary="V1">
+       <option name="closed" value="true" />
+@@ -105,7 +107,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1737461194286</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="Contador(romput)">
++      <option name="closed" value="true" />
++      <created>1737719964488</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1737719964488</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Contador(romput)">
++      <option name="closed" value="true" />
++      <created>1737720017121</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1737720017121</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -114,6 +132,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="V1" />
+     <MESSAGE value="Funció inutilitzada eliminada" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Funció inutilitzada eliminada" />
++    <MESSAGE value="Contador(romput)" />
++    <option name="LAST_COMMIT_MESSAGE" value="Contador(romput)" />
+   </component>
+ </project>
+\ No newline at end of file
