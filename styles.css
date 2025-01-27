@@ -108,6 +108,24 @@ body {
   transition: background-color 0.3s;
 }
 
+.score-button-punts {
+  background-color: darkgreen;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.score-button-faltes {
+  background-color: FireBrick;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .score-button:hover {
   background-color: #0056b3;
 }

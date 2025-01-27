@@ -26,6 +26,7 @@ function iniciar_partida(){
     periode = 1
     document.getElementById("period").innerHTML = periode;
     partit_finalitzat = false;
+    reiniciar_contador();
 }
 
 function alternar_mode(){
@@ -34,7 +35,7 @@ function alternar_mode(){
         "canviar_puntuacio_visitant_1", "canviar_puntuacio_visitant_2", "canviar_puntuacio_visitant_3", "canviar_faltes_visitant"
     ]
     let texte_botons_puntuacio_faltes = ["+1", "+2", "+3", "Falta"];
-    let color_botons_puntuacio_faltes = ["green", "green", "green", "red"];
+    let color_botons_puntuacio_faltes = ["darkgreen", "darkgreen", "darkgreen", "firebrick"];
 
     if (mode_restar){
         mode_restar = false;
@@ -43,7 +44,7 @@ function alternar_mode(){
         mode_restar = true;
         //Passar botons a negatiu
         texte_botons_puntuacio_faltes = ["-1", "-2", "-3", "Llevar falta"];
-        color_botons_puntuacio_faltes = ["red", "red", "red", "green"];
+        color_botons_puntuacio_faltes = ["firebrick", "firebrick", "firebrick", "darkgreen"];
     }
     for(let i = 0; i < id_botons_puntuacio_faltes.length; i++){
         let index = i % texte_botons_puntuacio_faltes.length; //La llista es llegeig dues vegades per aplicar-se als dos equips
